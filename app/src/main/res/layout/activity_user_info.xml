@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/primary"
+    tools:context=".activities.UserActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageBack"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:background="@drawable/background_icon"
+        android:padding="@dimen/_6sdp"
+        android:src="@drawable/ic_back"
+        android:tint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imageProfile"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/background_icon"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <View
+        android:id="@+id/textAvailability"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_83sdp"
+        android:layout_marginTop="@dimen/_83sdp"
+        android:background="@drawable/online_status_circle"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/imageProfile"
+        app:layout_constraintTop_toTopOf="@id/imageProfile" />
+
+    <TextView
+        android:id="@+id/textName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="@dimen/_160sdp"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/imageProfile"
+        app:layout_constraintStart_toStartOf="@id/imageProfile"
+        app:layout_constraintTop_toBottomOf="@+id/imageProfile" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_140sdp"
+        android:background="@drawable/background_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageBack"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <View
+            android:id="@+id/textBox"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/background_input" />
+
+        <ImageView
+            android:id="@+id/ic_mail"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignStart="@id/textBox"
+            android:layout_alignTop="@id/textBox"
+            android:layout_alignBottom="@id/textBox"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:src="@drawable/ic_mail" />
+
+        <TextView
+            android:id="@+id/textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/ic_mail"
+            android:layout_alignEnd="@id/buttonCopyMail"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_toEndOf="@id/ic_mail"
+            android:maxLines="1"
+            android:paddingTop="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp" />
+
+        <ImageView
+            android:id="@+id/buttonCopyMail"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignEnd="@id/textBox"
+            android:layout_alignTop="@id/textBox"
+            android:layout_alignBottom="@id/textBox"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:src="@drawable/ic_content_copy" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBlockUser"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:textColor="@color/error"
+            android:textSize="@dimen/_20ssp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/white"
+            app:strokeColor="@color/error"
+            app:strokeWidth="2dp"
+            app:cornerRadius="@dimen/_8sdp"
+            android:contentDescription="Button to block the user"/>
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
